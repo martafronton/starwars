@@ -3,8 +3,19 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Piloto extends Model
 {
-    //
+    use HasFactory;
+
+    protected $fillable = ['nombre', 'altura', 'anio_nacimiento', 'genero'];
+
+    public function naves()
+    {
+        return $this->belongsToMany(Nave::class)
+                    ->withPivot('fecha_inicio', 'fecha_fin')
+                    ->withTimestamps();
+    }
 }
+
