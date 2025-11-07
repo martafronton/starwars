@@ -1,0 +1,1086 @@
+{
+	"info": {
+		"_postman_id": "463fb4c2-a44c-4340-b1f4-3e7a9335fae3",
+		"name": "StarWars",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48599455"
+	},
+	"item": [
+		{
+			"name": "InsertarNave",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "6|D8jJ7pveT7yId9do9JVKMS36Ybaivualgcn523FKf548da4d",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Corbetahhh CttR90\",\r\n  \"modelo\": \"Corbejjta CR90\",\r\n  \"tripulacion\": 30165,\r\n  \"pasajeros\": 600,\r\n  \"clase_nave\": \"corbeta\",\r\n  \"planeta_id\": 1\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/insertarNave",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"insertarNave"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BorrarNave",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "3|qY407K2k4W9Jtm4JVqfaPPSxCOiKOUBnFmAFl7jL5b783056",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/eliminarNave/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"eliminarNave",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InsertarPlaneta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Marte\",\r\n  \"periodo_rotacion\": \"23\",\r\n  \"poblacion\": \"200000\",\r\n  \"clima\": \"árido\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/insertarPlaneta",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"insertarPlaneta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PilotosSinNave",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "5|McGjKaLXycvNXOgrbBG7ioIq2AaDL7qGiy2XGy2ff89dcee4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pilotosSinNave",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pilotosSinNave"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrarse",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Bono\",\r\n  \"email\": \"bono@gmail.com\",\r\n  \"password\": \"123456\",\r\n  \"rol\": \"admin\"\r\n}\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"martin@gmail.com\",\r\n  \"password\": \"123456\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mostrar Pilotos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|4ZplkntLADTL2IErPi71U04YqBCmVFwDJGejPw8Y74cfcd1f",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/mostrarPilotos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"mostrarPilotos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SubirImagen",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "5|McGjKaLXycvNXOgrbBG7ioIq2AaDL7qGiy2XGy2ff89dcee4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "imagen",
+							"type": "file",
+							"src": "postman-cloud:///1f0bc16a-14a7-4840-adca-0247428b1a18"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/subir-imagen/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"subir-imagen",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AsignarNave",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|vZDdUHwl0uINNwUG5hxfu6WygH8e15cO0qKXaFwb0347b9ac",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"piloto_id\": 1,\r\n  \"nave_id\": 2,\r\n  \"fecha_inicio\": \"2025-11-07\",\r\n  \"fecha_fin\": \"2025-11-10\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/asignar-nave",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"asignar-nave"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LogOut",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "4|MBv6yBzusfgeFkJbkntyuHijdxysvcfPjYMFfEG56fb52855",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"martin@gmail.com\",\r\n  \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/logout",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MostrarNaves",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "5|McGjKaLXycvNXOgrbBG7ioIq2AaDL7qGiy2XGy2ff89dcee4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/mostrarNaves",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"mostrarNaves"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MostrarNave",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "5|McGjKaLXycvNXOgrbBG7ioIq2AaDL7qGiy2XGy2ff89dcee4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/mostrarNave/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"mostrarNave",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MostrarPlanetas",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "5|McGjKaLXycvNXOgrbBG7ioIq2AaDL7qGiy2XGy2ff89dcee4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/mostrarPlanetas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"mostrarPlanetas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MostrarPlaneta",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "5|McGjKaLXycvNXOgrbBG7ioIq2AaDL7qGiy2XGy2ff89dcee4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/mostrarPlaneta/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"mostrarPlaneta",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MostrarMantenimientos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "5|McGjKaLXycvNXOgrbBG7ioIq2AaDL7qGiy2XGy2ff89dcee4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/mostrarMantenimientos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"mostrarMantenimientos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PilotosNave",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "5|McGjKaLXycvNXOgrbBG7ioIq2AaDL7qGiy2XGy2ff89dcee4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pilotosNave",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pilotosNave"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MostrarMantenimiento",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "5|McGjKaLXycvNXOgrbBG7ioIq2AaDL7qGiy2XGy2ff89dcee4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/mostrarMantenimiento/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"mostrarMantenimiento",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PilotosActivos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "5|McGjKaLXycvNXOgrbBG7ioIq2AaDL7qGiy2XGy2ff89dcee4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pilotosActivos",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pilotosActivos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MantenimientoFechas",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "5|McGjKaLXycvNXOgrbBG7ioIq2AaDL7qGiy2XGy2ff89dcee4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"fecha_inicio\": \"2025-11-01\",\r\n  \"fecha_fin\": \"2025-11-30\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/mantenimientoFecha",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"mantenimientoFecha"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InsertarMantenimiento",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "5|McGjKaLXycvNXOgrbBG7ioIq2AaDL7qGiy2XGy2ff89dcee4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"descripcion\": \"Cambio de motor hiperespacial\",\r\n  \"coste\": 25000,\r\n  \"nave_id\": 3,\r\n  \"fecha\": \"2025-11-07\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/guardarMantenimiento",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"guardarMantenimiento"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ModificarMantenimiento",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "5|McGjKaLXycvNXOgrbBG7ioIq2AaDL7qGiy2XGy2ff89dcee4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"descripcion\": \"Revisión completa de sistemas\",\r\n  \"fecha\": \"2025-11-10\",\r\n  \"coste\": 30000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/modificarMantenimiento/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"modificarMantenimiento",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BorrarMantenimiento",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "5|McGjKaLXycvNXOgrbBG7ioIq2AaDL7qGiy2XGy2ff89dcee4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"descripcion\": \"Revisión completa de sistemas\",\r\n  \"fecha\": \"2025-11-10\",\r\n  \"coste\": 30000\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/eliminarMantenimiento/4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"eliminarMantenimiento",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DesasociarNave",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "5|McGjKaLXycvNXOgrbBG7ioIq2AaDL7qGiy2XGy2ff89dcee4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"piloto_id\": 1,\r\n  \"nave_id\": 3\r\n}\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/desasociar-nave",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"desasociar-nave"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InsertarPiloto",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "5|McGjKaLXycvNXOgrbBG7ioIq2AaDL7qGiy2XGy2ff89dcee4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Luke Skywalker\",\r\n  \"altura\": 172,\r\n  \"anio_nacimiento\": \"19BBY\",\r\n  \"genero\": \"masculino\"\r\n}\r\n\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/crearPiloto",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"crearPiloto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ModificarPiloto",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "5|McGjKaLXycvNXOgrbBG7ioIq2AaDL7qGiy2XGy2ff89dcee4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Luke Skywalker\",\r\n  \"altura\": 172\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/modificarPiloto/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"modificarPiloto",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarPiloto",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "5|McGjKaLXycvNXOgrbBG7ioIq2AaDL7qGiy2XGy2ff89dcee4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Luke Skywalker\",\r\n  \"altura\": 172\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/eliminarPiloto/6",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"eliminarPiloto",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarPlaneta",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "5|McGjKaLXycvNXOgrbBG7ioIq2AaDL7qGiy2XGy2ff89dcee4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/eliminarPlaneta/6",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"eliminarPlaneta",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MostrarUsuarios",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "5|McGjKaLXycvNXOgrbBG7ioIq2AaDL7qGiy2XGy2ff89dcee4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/mostrarUsuarios/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"mostrarUsuarios",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CambiarRol",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "5|McGjKaLXycvNXOgrbBG7ioIq2AaDL7qGiy2XGy2ff89dcee4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"usuario_id\": 2,\r\n  \"rol\": \"admin\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/cambiarRol/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"cambiarRol",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
