@@ -18,7 +18,7 @@ class Nave extends Model
 
     public function pilotos()
     {
-        return $this->belongsToMany(Piloto::class)
+        return $this->belongsToMany(Piloto::class, 'piloto_nave')
                     ->withPivot('fecha_inicio', 'fecha_fin')
                     ->withTimestamps();
     }

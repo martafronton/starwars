@@ -14,7 +14,13 @@ class MantenimientoController extends Controller
 
     public function guardar_mantenimiento(Request $request)
     {
-        $mantenimiento = Mantenimiento::create($request->all());
+            $mantenimiento = new Mantenimiento();
+            $mantenimiento->descripcion = $request->descripcion;
+            $mantenimiento->coste = $request->coste;
+            $mantenimiento->nave_id = $request->nave_id;
+            $mantenimiento->fecha = $request->fecha ?? now(); // si no la mandan, se pone la actual
+            $mantenimiento->save();
+
         return response()->json($mantenimiento, 201);
     }
 
